@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Grace International School - Nurturing Excellence from Early Childhood to Junior High">
-    <title>Grace International School</title>
+    <meta name="description" content="BHEC - Belge Hopeland Educational Complex - Education for Liberation from Early Childhood to Junior High">
+    <title>BHEC - Belge Hopeland Educational Complex</title>
+    <link rel="icon" type="image/webp" href="public/bheclogo.webp">
+    <link rel="apple-touch-icon" href="public/bheclogo.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,7 +17,8 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <span class="logo-text"><span class="logo-blue">GRACE</span> SCHOOL.</span>
+                <img src="public/bheclogo.webp" alt="BHEC Logo" class="nav-logo">
+                <span class="logo-text"><span class="logo-blue">BHEC</span></span>
             </div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link active">HOME</a></li>
@@ -39,11 +42,11 @@
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-left">
-                    <p class="hero-badge">100% SATISFACTION GUARANTEE</p>
-                    <h1 class="hero-title">Unlock <span class="text-bold">Your Child's</span> Potential</h1>
-                    <p class="hero-subtitle">We believe every child has unique talents and abilities waiting to be discovered.</p>
+                    <p class="hero-badge">EDUCATION FOR LIBERATION</p>
+                    <h1 class="hero-title">Inspiring Hope, <span class="text-bold">Transforming</span> Society</h1>
+                    <p class="hero-subtitle">We train the head, heart and hands of learners in a vibrant environment that fosters academic excellence, good morals, and holistic development.</p>
                     <div class="hero-buttons">
-                        <a href="#admissions" class="btn btn-yellow">Enroll your ward</a>
+                        <button class="btn btn-yellow admissions-trigger">Enroll your ward</button>
                         <a href="#gallery" class="btn-play">
                             <span class="play-icon">▶</span>
                             <span class="play-text">TOUR OUR SCHOOL</span>
@@ -80,19 +83,47 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">About Grace International School</h2>
+                <h2 class="section-title">About Belge Hopeland Educational Complex</h2>
                 <div class="title-underline"></div>
             </div>
             <div class="about-content">
-                <p class="about-text">
-                    Grace International School is a premier educational institution committed to nurturing young minds through a balanced approach to academic excellence, character development, and holistic growth. We provide a safe, disciplined, and caring environment where children are encouraged to reach their full potential.
-                </p>
-                <p class="about-text">
-                    Our mission is to equip students with strong academic foundations, critical thinking skills, and moral values that prepare them for success in an ever-changing world. We partner with parents to ensure each child receives the individual attention and support they need to thrive.
-                </p>
-                <p class="about-text">
-                    At Grace International School, we believe that education goes beyond textbooks. We cultivate curiosity, creativity, and confidence in our students, preparing them not just for exams, but for life.
-                </p>
+                <div class="about-vision">
+                    <h3 class="about-subtitle">Vision Statement</h3>
+                    <p class="about-text">
+                        Be a vibrant centre that inspires hope, and fosters good morals and academic excellence in transforming society.
+                    </p>
+                </div>
+                <div class="about-mission">
+                    <h3 class="about-subtitle">Mission Statement</h3>
+                    <p class="about-text">
+                        To train the head, heart and hands of learners in a conducive environment for holistic self-development and societal transformation.
+                    </p>
+                </div>
+                <div class="about-values">
+                    <h3 class="about-subtitle">Core Values</h3>
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <h4 class="value-title">Respect</h4>
+                            <p class="value-text">We value the diverse perspectives and identities of people with patience and treat them with love.</p>
+                        </div>
+                        <div class="value-item">
+                            <h4 class="value-title">Integrity & Discipline</h4>
+                            <p class="value-text">We promote honesty, transparency, and ethical conduct (strong moral principles) in all life's interactions.</p>
+                        </div>
+                        <div class="value-item">
+                            <h4 class="value-title">Responsibility</h4>
+                            <p class="value-text">We encourage students to take ownership of their learning, actions and the well-being of others.</p>
+                        </div>
+                        <div class="value-item">
+                            <h4 class="value-title">Teamwork</h4>
+                            <p class="value-text">We champion cooperation and working well together with everyone to learn, to share and succeed.</p>
+                        </div>
+                        <div class="value-item">
+                            <h4 class="value-title">Excellence</h4>
+                            <p class="value-text">In diligence, we embrace critical thinking, innovation and creativity to excel in all life's pursuit.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -349,6 +380,22 @@
                         <p class="facility-text">Comprehensive security measures ensuring peace of mind for parents and students</p>
                     </div>
                 </div>
+                <div class="facility-card facility-teal">
+                    <div class="facility-image">
+                        <img src="public/ssciencelab.webp" alt="Science laboratory" loading="lazy">
+                        <div class="facility-overlay"></div>
+                    </div>
+                    <div class="facility-content">
+                        <div class="facility-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 2v7.5L3 17v3a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3l-6-7.5V2"></path>
+                                <path d="M9 2h6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="facility-title">Science Lab</h3>
+                        <p class="facility-text">Fully equipped laboratory for hands-on science experiments and practical learning</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -414,15 +461,77 @@
                     <div class="step-content">
                         <div class="step-number">04</div>
                         <h4>Enrollment</h4>
-                        <p>Complete enrollment formalities and join the Grace family</p>
+                        <p>Complete enrollment formalities and join the BHEC family</p>
                     </div>
                 </div>
             </div>
             <div class="admissions-cta">
-                <a href="#contact" class="btn btn-yellow">Apply for Admission</a>
+                <button id="admissionsBtn" class="btn btn-yellow">Apply for Admission</button>
             </div>
         </div>
     </section>
+
+    <!-- Admissions Modal -->
+    <div id="admissionsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Admissions Enquiry</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description">Thank you for your interest in BHEC! You can enquire about admissions through any of the following options:</p>
+                <div class="admission-options">
+                    <a href="tel:0593706141" class="admission-option option-phone">
+                        <div class="option-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <div class="option-content">
+                            <h4>Call Us</h4>
+                            <p>0593706141 / 0248090877 / 0533844359</p>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/233593706141" target="_blank" class="admission-option option-whatsapp">
+                        <div class="option-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
+                        </div>
+                        <div class="option-content">
+                            <h4>WhatsApp</h4>
+                            <p>Chat with us on WhatsApp</p>
+                        </div>
+                    </a>
+                    <a href="mailto:bhecsch@gmail.com?subject=Admissions Enquiry" class="admission-option option-email">
+                        <div class="option-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div class="option-content">
+                            <h4>Send Email</h4>
+                            <p>bhecsch@gmail.com</p>
+                        </div>
+                    </a>
+                    <div class="admission-option option-visit">
+                        <div class="option-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div class="option-content">
+                            <h4>Visit Us</h4>
+                            <p>Breman - Abusuakruwa<br>GPS: AK-161-6370</p>
+                            <p class="visit-hours">Mon-Fri: 6:30 AM - 3:15 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
@@ -464,7 +573,7 @@
                         </div>
                         <div>
                             <h4>Address</h4>
-                            <p>123 Education Avenue<br>Kumasi, Ghana</p>
+                            <p>Breman - Abusuakruwa<br>P.O. BOX SE 1277, SUAME – KUMASI<br>GPS: AK-161-6370</p>
                         </div>
                     </div>
                     <div class="info-item">
@@ -475,7 +584,7 @@
                         </div>
                         <div>
                             <h4>Phone</h4>
-                            <p>+233 544 054 537</p>
+                            <p>0593706141<br>0248090877<br>0533844359</p>
                         </div>
                     </div>
                     <div class="info-item">
@@ -487,7 +596,7 @@
                         </div>
                         <div>
                             <h4>Email</h4>
-                            <p>info@graceinternationalschool.edu.gh</p>
+                            <p>bhecsch@gmail.com</p>
                         </div>
                     </div>
                     <div class="info-item">
@@ -499,7 +608,7 @@
                         </div>
                         <div>
                             <h4>School Hours</h4>
-                            <p>Monday - Friday<br>7:30 AM - 3:30 PM</p>
+                            <p>Monday - Friday<br>6:30 AM - 3:15 PM</p>
                         </div>
                     </div>
                 </div>
@@ -513,10 +622,10 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-brand">
-                        <div class="logo-placeholder">GIS</div>
-                        <span class="school-name">Grace International School</span>
+                        <div class="logo-placeholder">BHEC</div>
+                        <span class="school-name">Belge Hopeland Educational Complex</span>
                     </div>
-                    <p class="footer-tagline">Nurturing Excellence, Building Character</p>
+                    <p class="footer-tagline">Education for Liberation</p>
                 </div>
                 <div class="footer-section">
                     <h4 class="footer-title">Quick Links</h4>
@@ -549,7 +658,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Grace International School. All rights reserved.</p>
+                <p>&copy; 2026 Belge Hopeland Educational Complex. All rights reserved.</p>
             </div>
         </div>
     </footer>

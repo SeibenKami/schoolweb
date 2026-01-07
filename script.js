@@ -106,14 +106,24 @@ if (contactForm) {
             return;
         }
 
-        // Simulate form submission
-        console.log('Form submitted:', formData);
+        // Create mailto link with form data
+        const subject = encodeURIComponent('Contact Form Submission - BHEC');
+        const body = encodeURIComponent(
+            `Name: ${formData.name}\n` +
+            `Email: ${formData.email}\n` +
+            `Phone: ${formData.phone}\n\n` +
+            `Message:\n${formData.message}`
+        );
 
-        // Show success message
-        showNotification('Thank you for contacting us! We will get back to you soon.', 'success');
+        const mailtoLink = `mailto:bhecsch@gmail.com?subject=${subject}&body=${body}`;
 
-        // Reset form
-        contactForm.reset();
+        // Open mailto link
+        window.location.href = mailtoLink;
+
+        // Reset form after a short delay
+        setTimeout(() => {
+            contactForm.reset();
+        }, 500);
     });
 }
 
@@ -286,4 +296,48 @@ window.addEventListener('load', () => {
     }, 100);
 });
 
-console.log('Grace International School website loaded successfully!');
+// ========================================
+// Admissions Modal
+// ========================================
+
+const admissionsModal = document.getElementById('admissionsModal');
+const modalClose = document.querySelector('.modal-close');
+const admissionTriggers = document.querySelectorAll('#admissionsBtn, .admissions-trigger');
+
+// Open modal on any admission button click
+admissionTriggers.forEach(trigger => {
+    if (trigger) {
+        trigger.addEventListener('click', () => {
+            admissionsModal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+    }
+});
+
+// Close modal on close button
+if (modalClose) {
+    modalClose.addEventListener('click', () => {
+        admissionsModal.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+    });
+}
+
+// Close modal when clicking outside
+if (admissionsModal) {
+    admissionsModal.addEventListener('click', (e) => {
+        if (e.target === admissionsModal) {
+            admissionsModal.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+    });
+}
+
+// Close modal on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && admissionsModal.classList.contains('active')) {
+        admissionsModal.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+});
+
+console.log('BHEC website loaded successfully!');

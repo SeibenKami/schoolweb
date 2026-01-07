@@ -81,6 +81,13 @@ body {
 .nav-brand {
     display: flex;
     align-items: center;
+    gap: 10px;
+}
+
+.nav-logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
 }
 
 .logo-text {
@@ -223,6 +230,9 @@ body {
     transition: var(--transition);
     display: inline-block;
     box-shadow: var(--shadow-md);
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-family);
 }
 
 .btn-yellow:hover {
@@ -420,11 +430,60 @@ body {
     margin: 0 auto;
 }
 
+.about-vision,
+.about-mission,
+.about-values {
+    margin-bottom: 40px;
+}
+
+.about-subtitle {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
 .about-text {
     font-size: 1rem;
     color: var(--medium-gray);
     margin-bottom: 20px;
     line-height: 1.8;
+    text-align: center;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.value-item {
+    background-color: var(--off-white);
+    padding: 24px 20px;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-blue);
+    transition: var(--transition);
+}
+
+.value-item:hover {
+    transform: translateX(8px);
+    box-shadow: var(--shadow-md);
+    background-color: var(--white);
+}
+
+.value-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--dark-gray);
+    margin-bottom: 10px;
+}
+
+.value-text {
+    font-size: 0.95rem;
+    color: var(--medium-gray);
+    line-height: 1.7;
 }
 
 /* ========================================
@@ -794,6 +853,15 @@ body {
     color: white;
 }
 
+.facility-teal {
+    border-top-color: var(--bright-teal);
+}
+
+.facility-teal .facility-icon {
+    background: linear-gradient(135deg, #4ECDC4 0%, #45B7AF 100%);
+    color: white;
+}
+
 /* ========================================
    Admissions Section - Mobile First
    ======================================== */
@@ -1139,6 +1207,237 @@ body {
 }
 
 /* ========================================
+   Admissions Modal
+   ======================================== */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background-color: var(--white);
+    border-radius: 20px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 24px 16px;
+    border-bottom: 2px solid var(--light-gray);
+}
+
+.modal-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-gray);
+    margin: 0;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--medium-gray);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: var(--transition);
+    line-height: 1;
+}
+
+.modal-close:hover {
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+}
+
+.modal-body {
+    padding: 24px;
+}
+
+.modal-description {
+    font-size: 1rem;
+    color: var(--medium-gray);
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.admission-options {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.admission-option {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    background-color: var(--off-white);
+    border-radius: 12px;
+    border-left: 4px solid transparent;
+    transition: var(--transition);
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.admission-option:hover {
+    transform: translateX(8px);
+    box-shadow: var(--shadow-md);
+    background-color: var(--white);
+}
+
+.option-phone {
+    border-left-color: var(--primary-blue);
+}
+
+.option-phone:hover {
+    border-left-color: var(--primary-blue);
+}
+
+.option-whatsapp {
+    border-left-color: #25D366;
+}
+
+.option-whatsapp:hover {
+    border-left-color: #25D366;
+}
+
+.option-email {
+    border-left-color: var(--bright-yellow);
+}
+
+.option-email:hover {
+    border-left-color: var(--bright-yellow);
+}
+
+.option-visit {
+    border-left-color: var(--soft-green);
+}
+
+.option-visit:hover {
+    border-left-color: var(--soft-green);
+    cursor: default;
+}
+
+.option-icon {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.option-phone .option-icon {
+    background: linear-gradient(135deg, #0066FF 0%, #0052CC 100%);
+    color: white;
+}
+
+.option-whatsapp .option-icon {
+    background: linear-gradient(135deg, #25D366 0%, #20BA5A 100%);
+    color: white;
+}
+
+.option-email .option-icon {
+    background: linear-gradient(135deg, #FFD439 0%, #FFC700 100%);
+    color: var(--dark-gray);
+}
+
+.option-visit .option-icon {
+    background: linear-gradient(135deg, #A3B78D 0%, #8FA577 100%);
+    color: white;
+}
+
+.admission-option:hover .option-icon {
+    transform: scale(1.1);
+}
+
+.option-content h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--dark-gray);
+    margin-bottom: 6px;
+}
+
+.option-content p {
+    font-size: 0.95rem;
+    color: var(--medium-gray);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.visit-hours {
+    font-size: 0.85rem;
+    color: var(--medium-gray);
+    font-style: italic;
+    margin-top: 6px;
+}
+
+@media (min-width: 640px) {
+    .modal-header {
+        padding: 28px 32px 20px;
+    }
+
+    .modal-header h3 {
+        font-size: 1.75rem;
+    }
+
+    .modal-body {
+        padding: 28px 32px 32px;
+    }
+
+    .admission-options {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .admission-option {
+        padding: 24px;
+    }
+}
+
+/* ========================================
    Animations
    ======================================== */
 
@@ -1173,6 +1472,10 @@ a, button, input, textarea {
 
     .navbar {
         padding: 14px 0;
+    }
+
+    .nav-logo {
+        height: 45px;
     }
 
     .logo-text {
@@ -1243,6 +1546,11 @@ a, button, input, textarea {
 
     .about-text {
         font-size: 1.05rem;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 26px;
     }
 
     .classes-grid {
@@ -1339,6 +1647,10 @@ a, button, input, textarea {
 
     .navbar {
         padding: 16px 0;
+    }
+
+    .nav-logo {
+        height: 50px;
     }
 
     .logo-text {
@@ -1461,12 +1773,33 @@ a, button, input, textarea {
     }
 
     .about-content {
-        max-width: 900px;
+        max-width: 1000px;
+    }
+
+    .about-subtitle {
+        font-size: 1.5rem;
     }
 
     .about-text {
         font-size: 1.125rem;
         margin-bottom: 24px;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+    }
+
+    .value-item {
+        padding: 28px 24px;
+    }
+
+    .value-title {
+        font-size: 1.2rem;
+    }
+
+    .value-text {
+        font-size: 1rem;
     }
 
     .classes-grid {
