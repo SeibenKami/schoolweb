@@ -416,6 +416,14 @@ body {
     font-weight: 800;
 }
 
+.title-underline {
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-blue);
+    border-radius: 2px;
+    margin: 12px auto 0;
+}
+
 /* ========================================
    About Section - Mobile First
    ======================================== */
@@ -1135,6 +1143,13 @@ body {
     justify-content: center;
 }
 
+.logo-placeholder {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--bright-yellow);
+    letter-spacing: 0.5px;
+}
+
 .footer-brand .logo-text {
     color: var(--white);
     font-size: 1.125rem;
@@ -1204,6 +1219,11 @@ body {
 .footer-bottom p {
     color: var(--medium-gray);
     font-size: 0.85rem;
+}
+
+.powered-by {
+    color: var(--bright-yellow);
+    font-weight: 600;
 }
 
 /* ========================================

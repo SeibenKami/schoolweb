@@ -30,18 +30,6 @@ if (mobileMenuToggle) {
 }
 
 // ========================================
-// Navbar Scroll Effect
-// ========================================
-
-const navbar = document.querySelector('.navbar');
-let lastScroll = 0;
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    lastScroll = currentScroll;
-});
-
-// ========================================
 // Active Navigation Link on Scroll
 // ========================================
 
