@@ -1349,6 +1349,14 @@ body {
     border-left-color: var(--bright-yellow);
 }
 
+.option-download {
+    border-left-color: #FF6B6B;
+}
+
+.option-download:hover {
+    border-left-color: #FF6B6B;
+}
+
 .option-visit {
     border-left-color: var(--soft-green);
 }
@@ -1382,6 +1390,11 @@ body {
 .option-email .option-icon {
     background: linear-gradient(135deg, #FFD439 0%, #FFC700 100%);
     color: var(--dark-gray);
+}
+
+.option-download .option-icon {
+    background: linear-gradient(135deg, #FF6B6B 0%, #EE5A5A 100%);
+    color: white;
 }
 
 .option-visit .option-icon {
