@@ -254,7 +254,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe elements for scroll reveal
-const revealElements = document.querySelectorAll('.class-card, .feature-item, .facility-card, .step');
+const revealElements = document.querySelectorAll('.class-card, .feature-card, .facility-card, .step');
 revealElements.forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
@@ -271,18 +271,6 @@ if (footerYear) {
     const currentYear = new Date().getFullYear();
     footerYear.textContent = footerYear.textContent.replace('2026', currentYear);
 }
-
-// ========================================
-// Loading Animation
-// ========================================
-
-window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    setTimeout(() => {
-        document.body.style.transition = 'opacity 0.3s ease-in';
-        document.body.style.opacity = '1';
-    }, 100);
-});
 
 // ========================================
 // Admissions Modal
